@@ -40,3 +40,13 @@ A robust, scalable, and fully functional RESTful API for managing a learning pla
 ├── utils/            # Helper functions, standard status texts, and error classes
 ├── index.js          # Entry point and Express app setup
 └── .env              # Environment variables
+
+🚀 Getting Started1. Clone the repositoryBashgit clone [https://github.com/MariamEssam5/Node-Courses-Project.git](https://github.com/MariamEssam5/Node-Courses-Project.git)
+cd Node-Courses-Project
+2. Install dependenciesBashnpm install
+3. Environment VariablesCreate a .env file in the root directory and add the following:Code snippetPORT=5000
+MONGO_URL=your_mongodb_connection_string
+JWT_SECRET=your_super_secret_jwt_key
+4. Run the serverBash# Start the development server using nodemon
+npm run dev
+📡 API Endpoints🧑‍💼 Users & AuthenticationMethodEndpointDescriptionAccessPOST/api/users/registerRegister a new user (with Avatar upload)PublicPOST/api/users/loginAuthenticate user and get JWTPublicGET/api/users/Get all users (Paginated)Authenticated📚 CoursesMethodEndpointDescriptionAccessGET/api/coursesGet all courses (Paginated)PublicGET/api/courses/:idGet a specific course by IDPublicPOST/api/coursesCreate a new courseMANAGERPATCH/api/courses/:idUpdate a courseMANAGER / ADMINDELETE/api/courses/:idDelete a courseMANAGER / ADMIN👩‍💻 AuthorMariam EssamSoftware Engineer | Mobile Application Developer (Flutter)
