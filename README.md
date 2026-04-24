@@ -1,4 +1,4 @@
-# 📚Courses Management API
+# 📚 CodeZone - Courses Management API
 
 A robust, scalable, and fully functional RESTful API for managing a learning platform. Built with Node.js, Express, and MongoDB, this project follows the MVC (Model-View-Controller) architecture and emphasizes clean code practices, secure authentication, and scalable error handling.
 
@@ -41,12 +41,43 @@ A robust, scalable, and fully functional RESTful API for managing a learning pla
 ├── index.js          # Entry point and Express app setup
 └── .env              # Environment variables
 
-🚀 Getting Started1. Clone the repositoryBashgit clone [https://github.com/MariamEssam5/Node-Courses-Project.git](https://github.com/MariamEssam5/Node-Courses-Project.git)
+🚀 Getting Started
+1. Clone the repository
+git clone [https://github.com/MariamEssam5/Node-Courses-Project.git](https://github.com/MariamEssam5/Node-Courses-Project.git)
 cd Node-Courses-Project
-2. Install dependenciesBashnpm install
-3. Environment VariablesCreate a .env file in the root directory and add the following:Code snippetPORT=5000
-MONGO_URL=your_mongodb_connection_string
+
+2. Install dependencies
+npm install
+
+3. Environment Variables
+Create a .env file in the root directory and add the following keys (replace the values with your actual database credentials and secrets):
+
+3. Environment Variables
+Create a .env file in the root directory and add the following keys (replace the values with your actual database credentials and secrets):
+PORT=5000
+MONGO_URL=mongodb+srv://<username>:<password>@cluster0...
 JWT_SECRET=your_super_secret_jwt_key
-4. Run the serverBash# Start the development server using nodemon
+
+4. Run the server
+# Start the development server using nodemon
 npm run dev
-📡 API Endpoints🧑‍💼 Users & AuthenticationMethodEndpointDescriptionAccessPOST/api/users/registerRegister a new user (with Avatar upload)PublicPOST/api/users/loginAuthenticate user and get JWTPublicGET/api/users/Get all users (Paginated)Authenticated📚 CoursesMethodEndpointDescriptionAccessGET/api/coursesGet all courses (Paginated)PublicGET/api/courses/:idGet a specific course by IDPublicPOST/api/coursesCreate a new courseMANAGERPATCH/api/courses/:idUpdate a courseMANAGER / ADMINDELETE/api/courses/:idDelete a courseMANAGER / ADMIN👩‍💻 AuthorMariam EssamSoftware Engineer | Mobile Application Developer (Flutter)
+
+📡 API Endpoints
+🧑‍💼 Users & Authentication
+Method,Endpoint,Description,Access
+POST,/api/users/register,Register a new user (with Avatar upload),Public
+POST,/api/users/login,Authenticate user and get JWT,Public
+GET,/api/users/,Get all users (Paginated),Authenticated
+
+📚 Courses
+Method,Endpoint,Description,Access
+GET,/api/courses,Get all courses (Paginated),Public
+GET,/api/courses/:id,Get a specific course by ID,Public
+POST,/api/courses,Create a new course,MANAGER
+PATCH,/api/courses/:id,Update a course,MANAGER / ADMIN
+DELETE,/api/courses/:id,Delete a course,MANAGER / ADMIN
+
+👩‍💻 Author
+Mariam Essam
+
+Software Engineer | Mobile Application Developer (Flutter)
